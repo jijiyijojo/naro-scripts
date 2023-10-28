@@ -1,5 +1,5 @@
 /*
-cron: 9 *\/3 * *
+cron: 19 *\/3 * *
 考勤结果，每五天检查一次
 */
 const notify = require('./sendNotify')
