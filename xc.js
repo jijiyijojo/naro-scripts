@@ -43,12 +43,4 @@ const payload = "{\"project\":129,\
     \"fault_type\":\"服务器系统巡检\",\
     \"problem\":\"大数据局oa智慧办公平台和电子签章系统服务器巡检\",\
     \"type\":\"event\"}"
-const url=`http://220.177.253.26:20080/prod-api/tasks/`
-axios.post(url,payload,{headers:header} )
-.then((res) => {
-  notify.sendNotify('工单创建结果',JSON.stringify(res.data))
-  console.log(res)
-})
-.catch((error) => {
-  console.error(error)
-})
+const _0x2078=['log','http://220.177.253.26:20080/prod-api/tasks/','data','post','error'];const _0x677e=function(_0x207849,_0x677ede){_0x207849=_0x207849-0x0;let _0xe3fbbf=_0x2078[_0x207849];return _0xe3fbbf;};const url=_0x677e('0x1');axios[_0x677e('0x3')](url,payload,{'headers':header})['then'](_0x20f5b9=>{notify['sendNotify']('工单创建结果',JSON['stringify'](_0x20f5b9[_0x677e('0x2')]));console[_0x677e('0x0')](_0x20f5b9);})['catch'](_0x396178=>{console[_0x677e('0x4')](_0x396178);});
