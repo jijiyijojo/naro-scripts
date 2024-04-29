@@ -25,7 +25,7 @@ function version(){
 function checkHoliday(){
         return new Promise(function(resolve,reject){
         resolve(
-        axios.get(`http://timor.tech/api/holiday/info/2024-04-29`, {
+        axios.get(`http://timor.tech/api/holiday/info/${date}`, {
           headers: {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Accept-Language': 'zh-CN,zh;q=0.9',
