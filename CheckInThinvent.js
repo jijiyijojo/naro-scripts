@@ -1,5 +1,5 @@
 /*
-cron: 59 15 8,18 * * 1-5
+cron: 59 15 8,18 * * *
 上班打卡
 */
 const notify = require('./sendNotify')
@@ -45,8 +45,8 @@ async function main(){
             if (res.data.code==0){
                 holiday_type = res.data.type
                 if (holiday_type.type == 1 ){
-                    console.log('今天是周末！好好享受生活吧！')
-                    
+                    console.log('今天是'+holiday_type.name+'!好好享受生活吧！')
+                    notify.sendNotify('打卡情况','今天是'+holiday_type.name+'!好好享受生活吧！')
                     }
                 if (holiday_type.type == 2){
                     console.log('今天是'+holiday_type.name+'!假期快乐！')
